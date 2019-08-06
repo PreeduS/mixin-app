@@ -1,0 +1,6 @@
+cd ./backend
+node server.js
+
+
+cd ./my-app
+npm run start
