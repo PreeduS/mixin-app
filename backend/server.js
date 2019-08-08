@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const path = require('path')
 var Cloudant = require('@cloudant/cloudant');
 
 
@@ -25,6 +26,8 @@ const cloudant = Cloudant({
 
 app.use(cors());
 app.use(bodyParser.json());
+
+app.use(express.static( path.join(__dirname,'..','my-app','build') ));
 
 let todos = [];
 
