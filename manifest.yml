@@ -1,0 +1,6 @@
+---
+applications:
+  - name: mixin-app-test-100
+    random-route: false
+    memory: 128M
+    command: npm install --prefix ./backend && node ./backend/server.js

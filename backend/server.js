@@ -2,6 +2,17 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
+var Cloudant = require('@cloudant/cloudant');
+
+const cloudant = Cloudant({
+    url:'...',
+    plugins:{
+        iamauth:{
+            iamApiKey:'...'
+        }
+    }
+});
+
 app.use(cors());
 app.use(bodyParser.json());
 
